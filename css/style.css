@@ -1,0 +1,125 @@
+html {
+	overflow-y: scroll;
+	max-width: 960px;
+/*	min-width: 540px;
+*/	margin: auto;
+}
+
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%; /* Generally set the font-size to 100% in the body - you can then change with em in the other areas */
+	line-height: 1.7em; /* The line-height property in CSS controls the space between lines of text. It is often set in a unitless value (e.g. line-height: 1.4; ) */
+	color: #000000;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h2 {
+	font-size: 400%;
+	line-height: 1.5em;
+	padding: 20px;
+}
+
+form {
+
+	max-width: 940px;
+	margin: 0;
+
+}
+
+.question {
+	max-width: 940px;
+	margin: 0 0 100px 0;
+	padding: 0;
+	border: 1px;
+
+}
+
+.question-box {
+	max-width: 940px;
+	/*min-width: 620px;*/
+	height: 350px;
+	margin: 0;
+	border: 3px solid #d8d8d8;
+
+}
+
+.answer-box {
+	max-width: 300px;
+	/*min-width: 180px;*/
+
+	height: 330px;
+	border: 1px solid #d8d8d8;
+	display: inline-block;	
+	float: left;
+	margin-top: 15px;
+
+	background-color: #f2f2f2;
+}
+.middle {
+	margin-left: 16px;
+	margin-right: 16px;
+
+}
+
+.answer-box img {
+	width: 250px;
+	height: 250px;
+	margin: 25px 25px 0px 25px;
+}
+
+.answer-box iframe {
+	width: 250px;
+	height: 180px;
+	margin: 25px 25px 0px 25px;
+
+}
+
+.answer-box input {
+	
+	margin-left: 25px;
+}
+
+.answer-box.song {
+	height: 260px;
+}
+
+/* --------------- */
+/*  RADIO BUTTONS  */
+/* --------------- */
+
+#submit {
+	margin: 0 100px 100px 60px;
+	    text-align: center;
+
+}
+
+.submitbtn {
+    background-color: #d8d8d8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    
+    position: relative;
+
+    width: 200px;
+    height: 70px;
+
+
+}
+
+answer-box:hover,.submitbtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
