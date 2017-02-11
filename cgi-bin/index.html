@@ -9,7 +9,7 @@
 
 <body>
 	<h1>Movie Generator</h1>
-	<form>
+	<form action="http://127.0.0.1:8000/cgi-bin/results.py" method="POST">
 		<!-- COLOR -->
 		<fieldset class="question">
 			<div class="question-box">
@@ -63,7 +63,7 @@
 		</fieldset>
 		
 		<!-- PLACE -->
-		<fieldset class="question">
+<!-- 		<fieldset class="question">
 			<div class="question-box">
 				<h2>choose a place that you want to be right now</h2>
 			</div>
@@ -112,10 +112,10 @@
 					<input type="radio" name="place" value="suburban_housek" />
 				</div>
 			</div>
-		</fieldset>
+		</fieldset> -->
 
 		<!-- FOOD -->
-		<fieldset class="question">
+<!-- 		<fieldset class="question">
 			<div class="question-box">
 				<h2>choose something you want to eat</h2>
 			</div>
@@ -164,10 +164,10 @@
 					<input type="radio" name="food" value="cheese" />
 				</div>
 			</div>
-		</fieldset>
+		</fieldset> -->
 
 		<!-- ACTIVITY -->
-		<fieldset class="question">
+	<!-- 	<fieldset class="question">
 			<div class="question-box">
 				<h2>choose something you want to eat</h2>
 			</div>
@@ -214,7 +214,7 @@
 				
 			</div>
 		</fieldset>
-
+ -->
 		<!-- SONG -->
 	<!-- 	<fieldset class="question">
 			<div class="question-box">
@@ -268,7 +268,7 @@
 		</fieldset> -->
 
 		<div id="submit">
-			<button class="submitbtn">Submit</button>
+			<input class="submitbtn" type="submit" value="Submit">
 		</div>
 	</form>
 
