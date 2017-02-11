@@ -1,10 +1,11 @@
-import watson_developer_cloud
+from watson_developer_cloud import AlchemyLanguageV1
 
 class Text2Emotion(object):
 
     def __init__(self):
         # bluemix AlchemyApi API key
-        api_key = '6487efd8fd5427eec5345d11fa679e3293370dd2'
+        #api_key = '6487efd8fd5427eec5345d11fa679e3293370dd2'
+        api_key = "5d786f4bcfcd24e67b053520e0b0cf42d0b821fd"
 
         # construct API object from key
         self.alchemy_language = AlchemyLanguageV1(api_key=api_key)
@@ -26,6 +27,7 @@ class Text2Emotion(object):
 
         # recalculate emotion percents and store them back in emotion_dict as floats
         total = (joy + disgust + anger + fear + sadness)
+        if total == 0: total = 1 # catch 0 exception
         emotion_dict["joy"] = joy/total
         emotion_dict["disgust"] = disgust/total
         emotion_dict["anger"] = anger/total

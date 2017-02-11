@@ -1,23 +1,21 @@
-import math
+# takes in movie object and a ranked list of emotions
+def isClose(movie, emotion_rank, user_emotions):
+    emo0 = emotion_rank[0]
+    emo1 = emotion_rank[1]
+    emo2 = emotion_rank[2]
+    dist0 = abs(movie.emotion_dict[emo0] - user_emotions[emo0])
+    dist1 = abs(movie.emotion_dict[emo1] - user_emotions[emo1])
+    dist2 = abs(movie.emotion_dict[emo2] - user_emotions[emo2])
+    smalldist = .3
+
+    if ((dist0 > smalldist) or (dist1 > smalldist) or (dist2 > smalldist)): return False
+    else: return True
 
 class AlgoMachine(object):
 
     def __init__(self, movie_list, user_emotions):
         self.movie_list = movie_list
         self.user_emotions = user_emotions
-
-    # takes in movie object and a ranked list of emotions
-    def isClose(movie, emotion_rank, user_emotions):
-        emo0 = emotion_rank[0]
-        emo1 = emotion_rank[1]
-        emo2 = emotion_rank[2]
-        dist0 = math.abs(movie.emotion_dict[emo0] - user_emotions[emo0])
-        dist1 = math.abs(movie.emotion_dict[emo1] - user_emotions[emo1])
-        dist2 = math.abs(movie.emotion_dict[emo2] - user_emotions[emo2])
-        smalldist = .1
-
-        if ((dist0 > smalldist) or (dist1 > smalldist) or (dist2 > smalldist)): return False
-        else: return True
 
     def calculate(self):
         # rank the emotions
@@ -36,10 +34,9 @@ class AlgoMachine(object):
 
         # iterate through all movies and get ones who have close percents for top 3 images
         relevant_movies = []
-        for movie in movie_list:
+        for movie in self.movie_list:
             if isClose(movie, emotion_rank, self.user_emotions):
                 relevant_movies.append(movie)
-
         return relevant_movies[:4]
 
 

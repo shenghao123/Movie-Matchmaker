@@ -10,16 +10,20 @@ class Movie(object):
 
 def main(user_emotions):
     text2emotion = Text2Emotion.Text2Emotion()
-    algorithm_machine = AlgoMachine.AlgoMachine()
     scraped_data = soup.parse()
+    movie_limit = 50
 
     movie_list = []
     for movie_name in scraped_data:
         movie_list.append(Movie(movie_name))
 
-    for movie in movie_list:
+    for movie in movie_list[:movie_limit]:
         movie.emotion_dict = text2emotion.generate(movie.description)
 
-    top_five = algorithm_machine.calculate(movie_list, user_emotions)
+    algorithm_machine = AlgoMachine.AlgoMachine(movie_list[:movie_limit],user_emotions)
+    top_five = algorithm_machine.calculate()
 
     return top_five
+
+# a = {"joy":.4, "sadness":.3, "fear":.1, "anger":.05, "disgust":.05}
+# print(main(a))

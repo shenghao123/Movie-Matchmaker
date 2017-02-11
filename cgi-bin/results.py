@@ -32,7 +32,7 @@ if form.getvalue("song"):
 else:
 	song = "Not set"
 if form.getvalue("food"):
-	foood = form.getvalue("food")
+	food = form.getvalue("food")
 else:
 	food = "Not set"
 #sets all the answers from the html file as their respective variable names
@@ -211,7 +211,7 @@ print ("</head>")
 print ("<body>")
 print ("<h2> Recommended Movies:</h2>")
 for movie in top_five_movies:
-	print(movie + "</br")
+	print(movie.description + "<br>")
 print ("</body>")
 print ("</html>")
 
