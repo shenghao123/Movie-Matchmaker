@@ -1,5 +1,3 @@
-import json
-from os.path import join, dirname
 from watson_developer_cloud import AlchemyLanguageV1
 
 # bluemix AlchemyApi API key
@@ -7,9 +5,6 @@ api_key = '6487efd8fd5427eec5345d11fa679e3293370dd2'
 
 # construct API object from key
 alchemy_language = AlchemyLanguageV1(api_key=api_key)
-
-# store URL to examine
-stored_url = 'https://developer.ibm.com/watson/blog/2015/11/03/price-reduction-for-watson-personality-insights/'
 
 # example text for testing
 test_text = "Daunted by the singular tastes and dark secrets of the handsome, tormented young entrepreneur Christian Grey, Anastasia Steele has broken off their relationship to start a new career with a Seattle Independent Publishing House (SIP); but desire for Christian still dominates her every waking thought, and when he proposes a new arrangement, Anastasia cannot resist. They rekindle their searing sexual affair, and Anastasia learns more about the harrowing past of her damaged, driven and demanding Fifty Shades. \n"\
