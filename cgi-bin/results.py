@@ -2,6 +2,7 @@
 
 import cgi
 import cgitb
+import sys
 
 cgitb.enable(display=0, logdir="index.html")
 #imports cgi and directions to html code
@@ -192,9 +193,16 @@ def getavg(emo):
 
 
 numlist = addshittothedic(dlist)
+#numlist is a dictionary that has all 5 emotions and the total of their repsective scores
 result = getavg(numlist)
+#result is the percentages of each emotion in a dictionary
 
-movies = ["home alone", "inside out", "kungfu panda"]
+
+#sys.path.insert(0, "../../Movie-Matchmaker")
+import Main
+
+top_five_movies = Main.main(result)
+
 print ("Content-type:text/html\r\n\r\n")
 print ("<html>")
 print ("<head>")
@@ -202,7 +210,7 @@ print ("<title>Hello - Second CGI Program</title>")
 print ("</head>")
 print ("<body>")
 print ("<h2> Recommended Movies:</h2>")
-for movie in movies:
+for movie in top_five_movies:
 	print(movie + "</br")
 print ("</body>")
 print ("</html>")

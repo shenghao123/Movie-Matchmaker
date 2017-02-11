@@ -1,4 +1,4 @@
-from watson_developer_cloud import AlchemyLanguageV1
+import watson_developer_cloud
 
 class Text2Emotion(object):
 
