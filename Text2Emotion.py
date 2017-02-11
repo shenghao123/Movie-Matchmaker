@@ -2,10 +2,10 @@ from watson_developer_cloud import AlchemyLanguageV1
 
 class Text2Emotion(object):
 
-    # bluemix AlchemyApi API key
-    api_key = '6487efd8fd5427eec5345d11fa679e3293370dd2'
-
     def __init__(self):
+        # bluemix AlchemyApi API key
+        api_key = '6487efd8fd5427eec5345d11fa679e3293370dd2'
+
         # construct API object from key
         self.alchemy_language = AlchemyLanguageV1(api_key=api_key)
 
