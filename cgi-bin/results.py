@@ -2,9 +2,11 @@
 
 import cgi
 import cgitb
+
 cgitb.enable(display=0, logdir="index.html")
 #imports cgi and directions to html code
 
+import urllib
 
 # print("Content-Type: text/html")    # HTML is following
 # print(display=0, logdir="/index.html")                        # blank line, end of headers
@@ -192,13 +194,23 @@ def getavg(emo):
 numlist = addshittothedic(dlist)
 result = getavg(numlist)
 
+movies= ["home alone", "inside out", "kungfu panda"]
+
 print ("Content-type:text/html\r\n\r\n")
 print ("<html>")
 print ("<head>")
 print ("<title>Hello - Second CGI Program</title>")
 print ("</head>")
 print ("<body>")
-print(type(color))
-print (color)
+print ("<h2> Recommended Movies:</h2>")
+for movie in movies:
+	print(movie + "</br>")
 print ("</body>")
 print ("</html>")
+
+# import urllib.request
+# page = urllib.request.urlopen("recommendations.html").read()
+# page = page.read().decode("utf8")
+# print(page)
+
+

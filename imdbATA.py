@@ -1,11 +1,9 @@
 from scrapy import Request
 from scrapy.spiders import Spider
 
-# from fullpath import path
-
 import collections
 #d = collections.OrderedDict()
-#scrapy runspider imbd.py -t csv -o imbd.csv
+#scrapy runspider imbdATA.py -t csv -o imbd.csv
 
 class S1(Spider):
 	name = 's1'

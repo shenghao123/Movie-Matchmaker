@@ -87,6 +87,36 @@ form {
 	height: 260px;
 }
 
+
+
+
+.movie {
+	width: 940px;
+	margin: 0 0 100px 0;
+	padding: 0;
+	
+	float: left;
+	display: inline-block;
+}
+
+.movie img {
+	width: 300px;
+	height: 400px;
+	border: 1px solid black;
+}
+
+.movie-info {
+	width: 580px;
+	height: 360px;
+	border: 1px dotted black;
+	float: right;
+	padding: 20px;
+}
+
+.movie h3 {
+	margin: 0;
+}
+
 /* --------------- */
 /*  RADIO BUTTONS  */
 /* --------------- */
@@ -123,3 +153,9 @@ form {
 answer-box:hover,.submitbtn:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+.color:hover
+        {
+            background:#53a7ea;
+            cursor: pointer;
+        }
