@@ -194,8 +194,7 @@ def getavg(emo):
 numlist = addshittothedic(dlist)
 result = getavg(numlist)
 
-movies= ["home alone", "inside out", "kungfu panda"]
-
+movies = ["home alone", "inside out", "kungfu panda"]
 print ("Content-type:text/html\r\n\r\n")
 print ("<html>")
 print ("<head>")
@@ -204,7 +203,7 @@ print ("</head>")
 print ("<body>")
 print ("<h2> Recommended Movies:</h2>")
 for movie in movies:
-	print(movie + "</br>")
+	print(movie + "</br")
 print ("</body>")
 print ("</html>")
 
