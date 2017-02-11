@@ -14,7 +14,7 @@ class AlgoMachine(object):
         dist0 = math.abs(movie.emotion_dict[emo0] - user_emotions[emo0])
         dist1 = math.abs(movie.emotion_dict[emo1] - user_emotions[emo1])
         dist2 = math.abs(movie.emotion_dict[emo2] - user_emotions[emo2])
-        smalldist = .03
+        smalldist = .1
 
         if ((dist0 > smalldist) or (dist1 > smalldist) or (dist2 > smalldist)): return False
         else: return True
